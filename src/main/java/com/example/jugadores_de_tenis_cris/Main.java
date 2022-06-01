@@ -12,13 +12,9 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner escaner = new Scanner(System.in);
-        List <Persona> jugadores_Tenis = new ArrayList<Persona>();
+        List <Persona> jugadoresTenis = new ArrayList<Persona>();
 
-        do
-        {
-
-
-
+        do {
             System.out.println("Ingrese el ID del jugador");
             id = escaner.nextInt();
             System.out.println("Ingrese la edad del jugador");
@@ -29,19 +25,15 @@ public class Main {
             apellido = escaner.next();
 
             Persona jugador = new Persona(id,edad,nombre,apellido);
-            jugadores_Tenis.add(jugador);
+            jugadoresTenis.add(jugador);
 
             System.out.println("¿Deseas seguir agregando jugadores? S/N");
 
-
-
-
-
-        } while (escaner.next() == "S");
-        System.out.println("Cantidad de jugadores registrados: " + jugadores_Tenis.size());
-        for(int i = 0; i < jugadores_Tenis.size();i++)
+        } while (escaner.next().equals("S"));
+        System.out.println("Cantidad de jugadores registrados: " + jugadoresTenis.size());
+        for(int i = 0; i < jugadoresTenis.size();i++)
         {
-            System.out.println(jugadores_Tenis.get(i));
+            System.out.println(jugadoresTenis.get(i));
         }
 
     }
