@@ -1,6 +1,7 @@
 package com.example.jugadores_de_tenis_cris;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -9,6 +10,7 @@ public class Main {
   static private int edad;
    static private String nombre;
    static private String apellido;
+   static private String[] palabrasNo = {"n","N","no","No","NO"};
     public static void main(String[] args) {
 
         Scanner escaner = new Scanner(System.in);
@@ -29,7 +31,7 @@ public class Main {
 
             System.out.println("¿Deseas seguir agregando jugadores? S/N");
 
-        } while (escaner.next().equals("S"));
+        } while (!Arrays.asList(palabrasNo).contains(escaner.next()));
         System.out.println("Cantidad de jugadores registrados: " + jugadoresTenis.size());
         for(int i = 0; i < jugadoresTenis.size();i++)
         {
